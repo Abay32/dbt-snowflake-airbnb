@@ -1,0 +1,32 @@
+[0m13:02:30.225436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A4BA446270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A4BB8E6810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A4BA4458E0>]}
+
+
+============================== 13:02:30.282395 | 9d9a4d95-4ecf-4e12-abfc-5bd596fb760a ==============================
+[0m13:02:30.282395 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:02:30.283593 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\akassa\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m13:02:30.515484 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\akassa\.dbt
+[0m13:03:00.304765 [debug] [MainThread]: Starter project path: C:\Users\akassa\Databricks\dbt_snowflake\.venv\Lib\site-packages\dbt\include\starter_project
+[0m13:03:00.360031 [info ] [MainThread]: 
+Your new dbt project "dbt_snowflake_airbnb" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:03:00.362030 [info ] [MainThread]: Setting up your profile.
+[0m13:03:00.364032 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No adapters available. Learn how to install an adapter by going to https://docs.getdbt.com/docs/connect-adapters#install-using-the-cli
+[0m13:03:00.365032 [debug] [MainThread]: Command `dbt init` failed at 13:03:00.365032 after 30.36 seconds
+[0m13:03:00.366031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A4BB81CE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A4BB9BC740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A4BB809550>]}
+[0m13:03:00.367030 [debug] [MainThread]: Flushing usage events
+[0m13:03:00.864310 [debug] [MainThread]: An error was encountered while trying to flush usage events
