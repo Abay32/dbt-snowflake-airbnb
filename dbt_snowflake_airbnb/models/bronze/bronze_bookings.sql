@@ -1,7 +1,18 @@
-{% set incremental_flag = 1 %}
+{{
+  config(
+    materialized = 'incremental'
+    )
+}}
 {% set incremental_col = 'created_at' %}
 
-select * from {{ source('staging', 'bookings') }}
-{% if incremental_flag == 1 %}
-    where {{ incremental_col }} > ( select coalesce(max( {{ incremental_col }} ), '1900-01-01') from {{ ref('bronze_bookings') }}  )
+select 
+    * 
+from 
+    {{ source('staging', 'bookings') }}
+{% if is_incremental() %}
+   where created_at > (
+        select 
+            coalesce(max(created_at), '1900-01-01')
+        from {{this}}
+   )
 {% endif %}
