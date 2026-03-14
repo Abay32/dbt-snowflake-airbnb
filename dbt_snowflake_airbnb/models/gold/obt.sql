@@ -1,7 +1,7 @@
 {% set configs = [
     {
         "table": "airbnb.silver.silver_bookings",
-        "columns": "*",
+        "columns": "silver_bookings.*",
         "alias" : "silver_bookings"
     },
     {
@@ -12,7 +12,7 @@
     },
     {
         "table": "airbnb.silver.silver_hosts",
-        "columns": "silver_hosts.host_name, silver_hosts.host_since, silver_hosts.is_superhost, silver_hosts.response_rate, silver_hosts.response_rate_quality, silver_hosts.created_at as host_created_at", 
+        "columns": "silver_hosts.host_id, silver_hosts.host_name, silver_hosts.host_since, silver_hosts.is_superhost, silver_hosts.response_rate, silver_hosts.response_rate_quality, silver_hosts.created_at as host_created_at", 
         "alias": "silver_hosts",
         "join_condition": "silver_listings.host_id = silver_hosts.host_id"
     }
